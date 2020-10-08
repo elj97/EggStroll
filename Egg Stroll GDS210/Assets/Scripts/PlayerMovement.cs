@@ -5,8 +5,6 @@ using UnityEngine.Rendering;
 
 public class PlayerMovement : MonoBehaviour
 {
-    //Phone Input
-    private int isTouchingScreen = 0;
 
     //Jumping
     private bool isGrounded;
@@ -28,14 +26,6 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        //Phone Input
-        foreach (Touch touch in Input.touches)
-        {
-            if (touch.phase == TouchPhase.Began)
-            {
-                isTouchingScreen = 1;
-            }
-        }
 
             //Jumping
             isGrounded = Physics2D.OverlapCircle(feetPos.position, checkRadius, whatIsGround);
