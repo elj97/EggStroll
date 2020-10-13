@@ -27,8 +27,8 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
 
-            //Jumping
-            isGrounded = Physics2D.OverlapCircle(feetPos.position, checkRadius, whatIsGround);
+        //Jumping
+        isGrounded = Physics2D.OverlapCircle(feetPos.position, checkRadius, whatIsGround);
 
         if (isGrounded == true && Input.GetKeyDown(KeyCode.Space))
         {
@@ -55,6 +55,15 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.Space))
         {
             isJumping = false;
+        }
+
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            SoundManager.PlaySound("eggCrack");
+        }
+        if (Input.GetKeyDown(KeyCode.J))
+        {
+            SoundManager.PlaySound("jump");
         }
 
     }
