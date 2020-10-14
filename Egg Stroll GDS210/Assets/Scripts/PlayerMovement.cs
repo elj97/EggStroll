@@ -5,6 +5,9 @@ using UnityEngine.Rendering;
 
 public class PlayerMovement : MonoBehaviour
 {
+    //Phone Input
+    private Touch touch;
+    private float myTouchDT = 0f;
 
     //Jumping
     private bool isGrounded;
@@ -19,6 +22,9 @@ public class PlayerMovement : MonoBehaviour
     private float jumpTimeCounter;
     public float jumpTime;
     private bool isJumping;
+
+
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -26,37 +32,86 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-
-        //Jumping
-        isGrounded = Physics2D.OverlapCircle(feetPos.position, checkRadius, whatIsGround);
-
-        if (isGrounded == true && Input.GetKeyDown(KeyCode.Space))
+        if (SystemInfo.deviceType == DeviceType.Desktop)
         {
-            isJumping = true;
-            jumpTimeCounter = jumpTime;
-            rb.velocity = Vector2.up * jumpForce;
-            Instantiate(jumpEffect, player.transform.position, Quaternion.identity);
-        }
+            //PC Input
+            isGrounded = Physics2D.OverlapCircle(feetPos.position, checkRadius, whatIsGround);
 
-        if (Input.GetKey(KeyCode.Space) && isJumping == true)
-        {
-
-            if (jumpTimeCounter > 0)
+            if (isGrounded == true && Input.GetKeyDown(KeyCode.Space))
             {
-                rb.velocity = Vector2.up * jumpForce;
-                jumpTimeCounter -= Time.deltaTime;
-            } else
+                isJumping = true;
+                jumpTimeCounter = jumpTime;
+                //rb.velocity = Vector2.up * jumpForce;
+                rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+                Instantiate(jumpEffect, player.transform.position, Quaternion.identity);
+            }
+
+            if (Input.GetKey(KeyCode.Space) && isJumping == true)
+            {
+
+                if (jumpTimeCounter > 0)
+                {
+                    //rb.velocity = Vector2.up * jumpForce;
+                    rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+                    jumpTimeCounter -= Time.deltaTime;
+                }
+                else
+                {
+                    isJumping = false;
+                }
+
+            }
+
+            if (Input.GetKeyUp(KeyCode.Space))
             {
                 isJumping = false;
             }
-
-        }
-
-        if (Input.GetKeyUp(KeyCode.Space))
+        } else if (SystemInfo.deviceType == DeviceType.Handheld)
         {
-            isJumping = false;
+            //Phone Input
+            if (Input.touchCount > 0)
+            {
+                touch = Input.GetTouch(0);
+                myTouchDT = myTouchDT + Time.deltaTime;
+
+                if (isGrounded == true)
+                {
+                    isJumping = true;
+                    jumpTimeCounter = jumpTime;
+                    rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+                    Instantiate(jumpEffect, player.transform.position, Quaternion.identity);
+                }
+            }
+            if (Input.touchCount < 1)
+            {
+                myTouchDT = 0f;
+            }
+
+            if (myTouchDT > 0)
+            {
+                if (isJumping == true)
+                {
+
+                    if (jumpTimeCounter > 0)
+                    {
+                        rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+                        jumpTimeCounter -= Time.deltaTime;
+                    }
+                    else
+                    {
+                        isJumping = false;
+                    }
+
+                }
+            }
+            if (myTouchDT == 0f)
+            {
+                isJumping = false;
+            }
         }
 
+
+        //Sound Effects
         if (Input.GetKeyDown(KeyCode.E))
         {
             SoundManager.PlaySound("eggCrack");
@@ -65,6 +120,7 @@ public class PlayerMovement : MonoBehaviour
         {
             SoundManager.PlaySound("jump");
         }
+
 
     }
 }
