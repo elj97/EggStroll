@@ -47,6 +47,15 @@ TextureImporter:
   - first:
       213: 649994678191587660
     second: realspikess_14
+  - first:
+      213: -1555082238926986030
+    second: realspikess_15
+  - first:
+      213: 3539317266679056594
+    second: realspikess_16
+  - first:
+      213: -207082675754475085
+    second: realspikess_17
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -77,7 +86,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -91,7 +100,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -146,34 +155,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Lspike
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 32
-        width: 6
-        height: 9
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6a97ca1a7471d59c0800000000000000
-      internalID: -3936964902829393498
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: SmlSpike
       rect:
         serializedVersion: 2
         x: 16
         y: 32
-        width: 5
-        height: 7
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -188,55 +176,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: realspikess_2
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 32
-        width: 6
-        height: 9
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 87947715a30d91550800000000000000
-      internalID: 6132161316535093624
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: realspikess_3
-      rect:
-        serializedVersion: 2
-        x: 55
-        y: 32
-        width: 6
-        height: 9
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1b69d6d0fc39f6e70800000000000000
-      internalID: 9110663088686601905
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: TouchLLSpike
       rect:
         serializedVersion: 2
         x: 64
         y: 32
-        width: 12
-        height: 9
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -255,9 +201,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 16
-        width: 10
-        height: 9
+        y: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -275,10 +221,10 @@ TextureImporter:
       name: TouchLSmlLSmlSpike
       rect:
         serializedVersion: 2
-        x: 53
-        y: 16
-        width: 22
-        height: 9
+        x: 48
+        y: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -296,10 +242,10 @@ TextureImporter:
       name: realspikess_7
       rect:
         serializedVersion: 2
-        x: 4
+        x: 0
         y: 0
-        width: 5
-        height: 7
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -314,34 +260,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: realspikess_8
-      rect:
-        serializedVersion: 2
-        x: 10
-        y: 0
-        width: 5
-        height: 7
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 729ec54564dc9d000800000000000000
-      internalID: 61305771892992295
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: realspikess_9
       rect:
         serializedVersion: 2
         x: 16
         y: 0
-        width: 5
-        height: 7
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -356,34 +281,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: realspikess_10
-      rect:
-        serializedVersion: 2
-        x: 22
-        y: 0
-        width: 5
-        height: 7
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: edd7d0de08cf68d70800000000000000
-      internalID: 9045194532283317726
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: realspikess_11
       rect:
         serializedVersion: 2
-        x: 51
+        x: 48
         y: 0
-        width: 6
-        height: 9
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -398,34 +302,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: realspikess_12
-      rect:
-        serializedVersion: 2
-        x: 58
-        y: 0
-        width: 5
-        height: 7
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f5b210b2773785070800000000000000
-      internalID: 8095347285858265951
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: realspikess_13
       rect:
         serializedVersion: 2
         x: 64
         y: 0
-        width: 6
-        height: 9
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -440,13 +323,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: realspikess_14
+      name: realspikess_15
       rect:
         serializedVersion: 2
-        x: 71
-        y: 0
-        width: 5
-        height: 7
+        x: 0
+        y: 16
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -454,8 +337,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c41018b47be350900800000000000000
-      internalID: 649994678191587660
+      spriteID: 2d4ec3061fc3b6ae0800000000000000
+      internalID: -1555082238926986030
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: realspikess_16
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d8cfcb4d4e2e1130800000000000000
+      internalID: 3539317266679056594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: realspikess_17
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b16480576b402df0800000000000000
+      internalID: -207082675754475085
       vertices: []
       indices: 
       edges: []
