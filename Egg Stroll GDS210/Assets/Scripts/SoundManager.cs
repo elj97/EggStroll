@@ -12,7 +12,8 @@ public class SoundManager : MonoBehaviour
     void Start()
     {
         playerCrackSound = Resources.Load<AudioClip>("eggCrack");
-        playerJumpSound = Resources.Load<AudioClip>("jump");
+        playerJumpSound = Resources.Load<AudioClip>("EggyJump");
+        //playerDeathSound = Resources.Load<AudioClip > ("EggyDeath");
 
         audioSource = GetComponent<AudioSource>();
     }
@@ -51,9 +52,13 @@ public class SoundManager : MonoBehaviour
             case "eggCrack":
                 audioSource.PlayOneShot(playerCrackSound);
                 break;
-            case "jump":
+            case "EggyJump":
                 audioSource.PlayOneShot(playerJumpSound);
                 break;
+            /*case "EggyDeath":
+                audioSource.PlayOneShot(playerDeathSound);
+                break;
+            */
         }
     }
 

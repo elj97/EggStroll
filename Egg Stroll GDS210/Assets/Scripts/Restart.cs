@@ -9,9 +9,9 @@ public class Restart : MonoBehaviour
     {
         if (coll.gameObject.tag == "Player")
         {
+            SoundManager.PlaySound("eggCrack");
 
             RestartLevel();
-
         }
     }
 
