@@ -9,6 +9,7 @@ public class ScoreManager : MonoBehaviour
     public static ScoreManager instance;
     public TextMeshProUGUI text;
     int score;
+    public TextMeshProUGUI finalScoreText;
 
     void Start()
     {
@@ -22,5 +23,13 @@ public class ScoreManager : MonoBehaviour
     {
         score += coinValue;
         text.text = "Score " + score.ToString();
+    }
+
+    private void Update()
+    {
+        if (finalScoreText !== null)
+        {
+            finalScoreText.text = score.ToString();
+        }
     }
 }
