@@ -24,8 +24,7 @@ public class PassFinishLine : MonoBehaviour
 
         if (hasFinished == true)
         {
-            //Change speed of sprite animation
-            //Change speed of screen movement
+            Time.timeScale = 0.75f;
         }
     }
 
@@ -41,5 +40,16 @@ public class PassFinishLine : MonoBehaviour
         }
     }
 
-    
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject == finishLine)
+        {
+            hasFinished = true;
+        }
+        if (collision.gameObject == nest)
+        {
+            endScreen.SetActive(true);
+        }
+    }
+
 }
