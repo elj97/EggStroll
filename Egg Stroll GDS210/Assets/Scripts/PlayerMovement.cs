@@ -126,7 +126,7 @@ public class PlayerMovement : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.J))
         {
-            SoundManager.PlaySound("jump");
+            SoundManager.PlaySound("Eggyjump");
         }
         
     }

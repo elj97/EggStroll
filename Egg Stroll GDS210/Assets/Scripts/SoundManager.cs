@@ -13,7 +13,7 @@ public class SoundManager : MonoBehaviour
     {
         playerCrackSound = Resources.Load<AudioClip>("eggCrack");
         playerJumpSound = Resources.Load<AudioClip>("EggyJump");
-        //playerDeathSound = Resources.Load<AudioClip > ("EggyDeath");
+      //  playerDeathSound = Resources.Load<AudioClip > ("EggyDeath");
 
         audioSource = GetComponent<AudioSource>();
     }
@@ -59,6 +59,7 @@ public class SoundManager : MonoBehaviour
                 audioSource.PlayOneShot(playerDeathSound);
                 break;
             */
+            
         }
     }
 
