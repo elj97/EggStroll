@@ -23,6 +23,8 @@ public class PlayerMovement : MonoBehaviour
     public float jumpTime;
     private bool isJumping;
 
+    public float jumpEffectLower = -5f;
+
 
 
     void Start()
@@ -43,7 +45,8 @@ public class PlayerMovement : MonoBehaviour
                 jumpTimeCounter = jumpTime;
                 //rb.velocity = Vector2.up * jumpForce;
                 rb.velocity = new Vector2(rb.velocity.x, jumpForce);
-                Instantiate(jumpEffect, player.transform.position, Quaternion.identity);
+                Vector3 jumpEffectPos = new Vector3(0f, jumpEffectLower, 0f);
+                Instantiate(jumpEffect, player.transform.position + jumpEffectPos, jumpEffect.transform.rotation);
             }
 
             if (Input.GetKey(KeyCode.Space) && isJumping == true)
@@ -66,9 +69,13 @@ public class PlayerMovement : MonoBehaviour
             {
                 isJumping = false;
             }
-        } else if (SystemInfo.deviceType == DeviceType.Handheld)
+        }
+        else if (SystemInfo.deviceType == DeviceType.Handheld)
         {
             //Phone Input
+
+            isGrounded = Physics2D.OverlapCircle(feetPos.position, checkRadius, whatIsGround);
+
             if (Input.touchCount > 0)
             {
                 touch = Input.GetTouch(0);
@@ -79,7 +86,8 @@ public class PlayerMovement : MonoBehaviour
                     isJumping = true;
                     jumpTimeCounter = jumpTime;
                     rb.velocity = new Vector2(rb.velocity.x, jumpForce);
-                    Instantiate(jumpEffect, player.transform.position, Quaternion.identity);
+                    Vector3 jumpEffectPos = new Vector3(0f, jumpEffectLower, 0f);
+                    Instantiate(jumpEffect, player.transform.position + jumpEffectPos, jumpEffect.transform.rotation);
                 }
             }
             if (Input.touchCount < 1)
@@ -120,7 +128,7 @@ public class PlayerMovement : MonoBehaviour
         {
             SoundManager.PlaySound("jump");
         }
-
-
+        
     }
+
 }
