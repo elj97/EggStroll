@@ -2276,6 +2276,7 @@ GameObject:
   - component: {fileID: 392977744}
   - component: {fileID: 392977743}
   - component: {fileID: 392977742}
+  - component: {fileID: 392977746}
   m_Layer: 0
   m_Name: Spikes
   m_TagString: Untagged
@@ -2761,6 +2762,18 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!114 &392977746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 392977740}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b552e8bd25b2f89419cd0f66711f27ad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &402378618
 GameObject:
   m_ObjectHideFlags: 0
@@ -3723,6 +3736,11 @@ PrefabInstance:
       propertyPath: nest
       value: 
       objectReference: {fileID: 307495163}
+    - target: {fileID: 6303839866048990312, guid: f2f22958b3ad3fa4aaae99017ec07271,
+        type: 3}
+      propertyPath: m_Constraints
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 6303839866048990313, guid: f2f22958b3ad3fa4aaae99017ec07271,
         type: 3}
       propertyPath: m_Material
@@ -4621,6 +4639,7 @@ GameObject:
   - component: {fileID: 859942889}
   - component: {fileID: 859942891}
   - component: {fileID: 859942888}
+  - component: {fileID: 859942892}
   m_Layer: 0
   m_Name: Falling Trigger
   m_TagString: Untagged
@@ -4729,6 +4748,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6d6feb3712dd00444bb2801e6ed0f0bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &859942892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 859942887}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70249e7a8f17ef74995ed714067e3a7e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &901889541 stripped
@@ -7381,7 +7412,7 @@ Tilemap:
     second:
       serializedVersion: 2
       m_TileIndex: 0
-      m_TileSpriteIndex: 0
+      m_TileSpriteIndex: 7
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -8646,23 +8677,23 @@ Tilemap:
   - m_RefCount: 2
     m_Data: {fileID: 11400000, guid: 79e8b5625baa5584c9d37e61c7fe94fc, type: 2}
   m_TileSpriteArray:
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 1
     m_Data: {fileID: 4567354757381988103, guid: 58591d9ac0b21aa42915112c232cebcf,
       type: 3}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
   - m_RefCount: 18
     m_Data: {fileID: -169661183841194128, guid: 58591d9ac0b21aa42915112c232cebcf,
       type: 3}

@@ -5,16 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class SoundManager : MonoBehaviour
 {
-    public static AudioClip playerCrackSound, playerJumpSound, playerWinSound;
+    public static AudioClip playerCrackSound, playerDeathSound, playerJumpSound, playerWinSound;
     private static AudioSource audioSource;
   
 
     void Start()
     {
-        playerCrackSound = Resources.Load<AudioClip>("eggCrack");
+        playerDeathSound = Resources.Load<AudioClip>("deadegg");
         playerJumpSound = Resources.Load<AudioClip>("eggyJump");
         playerWinSound = Resources.Load<AudioClip>("victorySound");
-      //  playerDeathSound = Resources.Load<AudioClip > ("EggyDeath");
+        //playerDeathSound = Resources.Load<AudioClip > ("EggyDeath");
 
         audioSource = GetComponent<AudioSource>();
     }
@@ -50,19 +50,19 @@ public class SoundManager : MonoBehaviour
     {
         switch (clip)
         {
-            case "eggCrack":
+            /*case "eggCrack":
                 audioSource.PlayOneShot(playerCrackSound);
-                break;
+                break;*/
             case "eggyJump":
                 audioSource.PlayOneShot(playerJumpSound);
                 break;
             case "victorySound":
                 audioSource.PlayOneShot(playerWinSound);
                 break;
-            /*case "EggyDeath":
+            case "deadegg":
                 audioSource.PlayOneShot(playerDeathSound);
                 break;
-            */
+            
             
         }
     }

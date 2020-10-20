@@ -3,13 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
+
+
 public class Restart : MonoBehaviour
 {
     void OnTriggerEnter2D (Collider2D coll)
     {
         if (coll.gameObject.tag == "Player")
         {
-            SoundManager.PlaySound("eggCrack");
 
             RestartLevel();
         }
