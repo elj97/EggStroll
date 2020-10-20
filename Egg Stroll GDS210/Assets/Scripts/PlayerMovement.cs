@@ -25,6 +25,7 @@ public class PlayerMovement : MonoBehaviour
 
     public float jumpEffectLower = -5f;
 
+    private bool jumpSoundPlayed = false;
 
 
     void Start()
@@ -34,11 +35,24 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        isGrounded = Physics2D.OverlapCircle(feetPos.position, checkRadius, whatIsGround);
+
+        //When jumped play sound, if sound has not played (soundplayed false to true), if isgrounded true then set soundplayed to false
+        if (isJumping == true && jumpSoundPlayed == false)
+        {
+            SoundManager.PlaySound("eggyJump");
+            jumpSoundPlayed = true;
+        }
+        if (isJumping == false)
+        {
+            jumpSoundPlayed = false;
+        }
+
+
         if (SystemInfo.deviceType == DeviceType.Desktop)
         {
             //PC Input
-            isGrounded = Physics2D.OverlapCircle(feetPos.position, checkRadius, whatIsGround);
-
+            
             if (isGrounded == true && Input.GetKeyDown(KeyCode.Space))
             {
                 isJumping = true;
@@ -73,8 +87,6 @@ public class PlayerMovement : MonoBehaviour
         else if (SystemInfo.deviceType == DeviceType.Handheld)
         {
             //Phone Input
-
-            isGrounded = Physics2D.OverlapCircle(feetPos.position, checkRadius, whatIsGround);
 
             if (Input.touchCount > 0)
             {
@@ -126,7 +138,7 @@ public class PlayerMovement : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.J))
         {
-            SoundManager.PlaySound("Eggyjump");
+            SoundManager.PlaySound("eggyJump");
         }
         
     }

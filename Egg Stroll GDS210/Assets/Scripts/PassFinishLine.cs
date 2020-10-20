@@ -9,6 +9,7 @@ public class PassFinishLine : MonoBehaviour
     private bool hasFinished = false;
     public GameObject nest;
     public GameObject endScreen;
+    private bool soundPlayed = false;
 
     void Start()
     {
@@ -37,6 +38,11 @@ public class PassFinishLine : MonoBehaviour
         if (collider.gameObject == nest)
         {
             endScreen.SetActive(true);
+            if (soundPlayed == false)
+            {
+                SoundManager.PlaySound("victorySound");
+                soundPlayed = true;
+            }
         }
     }
 
